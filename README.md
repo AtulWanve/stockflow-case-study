@@ -85,9 +85,3 @@ Open browser or use curl:
 ```
 http://localhost:3000/api/companies/1/alerts/low-stock
 ```
-
----
-
-## Submission
-
-GitHub Repo: [https://github.com/AtulWanve/stockflow-case-study](https://github.com/AtulWanve/stockflow-case-study)
