@@ -24,7 +24,7 @@ Please refer to `CaseStudyResponse.md` for detailed explanations related to:
 
 ---
 
-## Part 1: Code Review & Bug Fix
+## Part 1: Code Review & Bug Fix
 
 - Reviewed and fixed the logic in `stock_service.js` to avoid negative stock updates.
 - Added validation for non-existent items and invalid quantities.
@@ -37,7 +37,7 @@ node test.js
 
 ---
 
-## Part 2: Database Schema Design
+## Part 2: Database Schema Design
 
 - Designed the schema with `products`, `warehouses`, and `inventory` tables.
 - Used basic constraints and keys to ensure data consistency.
@@ -45,7 +45,7 @@ node test.js
 
 ---
 
-## Part 3: Low‑Stock Alerts API
+## Part 3: Low‑Stock Alerts API
 
 - Built using Express.js
 - Endpoint: `GET /api/companies/:company_id/alerts/low-stock`
