@@ -45,7 +45,7 @@ node test.js
 
 ---
 
-## Part 3: Low‑Stock Alerts API
+## Part 3: Low-Stock Alerts API
 
 - Built using Express.js
 - Endpoint: `GET /api/companies/:company_id/alerts/low-stock`
