@@ -15,7 +15,7 @@ This repository contains my submission for the Backend Engineering Intern Case S
 
 ---
 
-## Case Study Write‑Up
+## Case Study Write-Up
 
 Please refer to `CaseStudyResponse.md` for detailed explanations related to:
 - Code issues and fixes (Part 1)
