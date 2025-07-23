@@ -61,4 +61,4 @@ GET /api/companies/:company_id/alerts/low-stock
 ### Edge Cases Considered
 - Empty inventory list
 - No low-stock items
-- Products exactly at reorder level
+- Products exactly at reorder level 
