@@ -1,87 +1,21 @@
-# stockflow-case-study  
-**Backend Intern Case Study – Bynry Inc**
+# 📦 Low Stock Alert System
 
-This repository contains my submission for the Backend Engineering Intern Case Study at Bynry Inc. It is divided into three parts:
+## Overview
+This project manages inventory across multiple warehouses and provides low-stock alerts for products based on recent sales and product-specific thresholds.
 
----
+## Features
+- Products can exist in multiple warehouses
+- Low stock thresholds vary by product type
+- Alerts only for recently sold products (last 30 days)
+- Supplier info included in alerts
+- Supports bundles and inventory history
 
-## Table of Contents
+## API
+**GET /api/companies/{company_id}/alerts/low-stock**  
+Returns low-stock alerts with estimated days until stockout.
 
-1. [Case Study Write‑Up](#case-study-write-up)  
-2. [Part 1: Code Review & Bug Fix](#part-1-code-review--bug-fix)  
-3. [Part 2: Database Schema Design](#part-2-database-schema-design)  
-4. [Part 3: Low‑Stock Alerts API](#part-3-low-stock-alerts-api)  
-5. [How to Run](#how-to-run)  
-
----
-
-## Case Study Write-Up
-
-Please refer to `CaseStudyResponse.md` for detailed explanations related to:
-- Code issues and fixes (Part 1)
-- Database schema structure and assumptions (Part 2)
-- API logic and behavior (Part 3)
-
----
-
-## Part 1: Code Review & Bug Fix
-
-- Reviewed and fixed the logic in `stock_service.js` to avoid negative stock updates.
-- Added validation for non-existent items and invalid quantities.
-
-Test using:
-```bash
-cd code_review
-node test.js
-```
-
----
-
-## Part 2: Database Schema Design
-
-- Designed the schema with `products`, `warehouses`, and `inventory` tables.
-- Used basic constraints and keys to ensure data consistency.
-- SQL file provided in `schema/schema.sql`.
-
----
-
-## Part 3: Low-Stock Alerts API
-
-- Built using Express.js
-- Endpoint: `GET /api/companies/:company_id/alerts/low-stock`
-- Returns products where quantity is less than or equal to reorder level.
-- Sample response:
-```json
-{
-  "alerts": [
-    {
-      "product": "item-1",
-      "quantity": 3,
-      "reorder_level": 5
-    }
-  ],
-  "total_alerts": 1
-}
-```
-
----
-
-## How to Run
-
-### Part 1
-```bash
-cd code_review
-node test.js
-```
-
-### Part 3 API
-```bash
-cd api
-npm install
-node app.js
-```
-
-Open browser or use curl:
-```
-http://localhost:3000/api/companies/1/alerts/low-stock
-```
+## Assumptions
+- Thresholds stored by product type
+- Recent sales = last 30 days
+- First supplier is used in alerts
+- Products have a `type` field
