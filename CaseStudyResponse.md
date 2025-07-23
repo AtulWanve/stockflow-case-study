@@ -1,6 +1,3 @@
-
-# CaseStudyResponse.md
-
 ## Part 1: Code Review & Bug Fix
 
 ### Issues Found
@@ -65,7 +62,3 @@ GET /api/companies/:company_id/alerts/low-stock
 - Empty inventory list
 - No low-stock items
 - Products exactly at reorder level
-
----
-
-Thanks for reviewing my case study!
